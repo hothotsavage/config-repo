@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: sell
+    password: H0thotsavage
+    url: jdbc:mysql://192.168.241.3/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  jackson:
+    # 如果字段值为null则不返回
+    default-property-inclusion: non_null
+  rabbitmq:
+    host: 192.168.241.3
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  instance:
+    prefer-ip-address: true  #将IP注册到Eureka Server上，而如果不配置就是机器的主机名
+
+management:
+  security:
+     enabled: false
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+
+env:
+  dev2
+
+girl:
+  name: lily
+  age: 20
